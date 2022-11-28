@@ -44,7 +44,8 @@ namespace StackUsingSingleLinkList
 
         public void pop()
         {
-
+            Console.WriteLine("\n The poped elements is: + top.info");
+            top = top.next; //make top point to the next node is squence
         }
     }
     internal class Program
