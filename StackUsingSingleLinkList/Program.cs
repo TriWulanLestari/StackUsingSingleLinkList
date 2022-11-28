@@ -31,6 +31,11 @@ namespace StackUsingSingleLinkList
             else
                 return (false);
         }
+
+        public void push(int element)
+        {
+
+        }
     }
     internal class Program
     {
