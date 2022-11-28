@@ -17,10 +17,10 @@ namespace StackUsingSingleLinkList
         }
     }
 
-    class stack
+    class Stack
     {
         node top;
-        public stack()
+        public Stack()
         {
             top = null;
         }
@@ -63,9 +63,7 @@ namespace StackUsingSingleLinkList
                 }
             }
         }
-    }
-    internal class Program
-    {
+
         static void Main(string[] args)
         {
             Stack s = new Stack();
@@ -79,11 +77,30 @@ namespace StackUsingSingleLinkList
                 Console.WriteLine("4. Exit ");
                 Console.Write("\nEnter your choice: ");
                 string input = Console.ReadLine();
-                char ch = Convert.ToChar(input == "" ? "o" : input);
+                char ch = Convert.ToChar(input == "" ? "0" : input);
                 switch (ch)
                 {
                     case '1':
-
+                        Console.Write("\nEnter a number :");
+                        int num = Convert.ToInt32(Console.ReadLine());
+                        s.push(num);
+                        break;
+                    case '2':
+                        if (s.empty())
+                        {
+                            Console.WriteLine("\nStack empty");
+                            break;
+                        }
+                        s.pop();
+                        break;
+                    case '3':
+                        s.display();
+                        break;
+                    case '4':
+                        return;
+                    default:
+                        Console.WriteLine("\nInvalid Choice");
+                        break;
                 }
             }
         }
